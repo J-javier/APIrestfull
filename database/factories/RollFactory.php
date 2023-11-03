@@ -1,0 +1,25 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Roll>
+ */
+class RollFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'rol'=>fake()->name(),
+            'usuario_creacion'=>fake()->numberBetween(1,10),
+            'usuario_modificacion'=>fake()->numberBetween(1,10),
+        ];
+    }
+}
